@@ -1,12 +1,12 @@
 {
   "channels": [
     {
-      "id": "channel-id",
-      "group": "group-1"
+      "id": "YOUR_CHANNEL_ID",
+      "group": "hindi"
     },
     {
-      "id": "2nd-channel-id",
-      "group": "group-2"
+      "id": "YOUR_SECOND_CHANNEL_ID",
+      "group": "english"
     }
   ]
 }
