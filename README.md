@@ -15,7 +15,7 @@
 
 ### Discord Notification
 <!-- Add screenshot here -->
-> _Screenshot coming soon — shows the notification card as it appears in a Discord channel._
+> https://private-user-images.githubusercontent.com/64677172/610010216-332a84fd-ea3b-4812-9b55-5f791a3c7685.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODE4MDMzODEsIm5iZiI6MTc4MTgwMzA4MSwicGF0aCI6Ii82NDY3NzE3Mi82MTAwMTAyMTYtMzMyYTg0ZmQtZWEzYi00ODEyLTliNTUtNWY3OTFhM2M3Njg1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA2MTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNjE4VDE3MTgwMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkxZmM1YTgwNzYyMjVkN2M2YWNkOGZhMGM2Y2U1ZDc3MmU3ODYzMWY0YmY5MjYxNWU5ZWJhMjdjMGYwNWIyMjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.2JVdo3lV4QF4DhiLFQ3qaeikuMpPPHvXZtcvIZfjjnM — shows the notification card as it appears in a Discord channel._
 
 ### Telegram Notification
 <!-- Add screenshot here -->
