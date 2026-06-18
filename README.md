@@ -15,15 +15,14 @@
 
 ### Discord Notification
 <!-- Add screenshot here -->
-> ![Discord Notification](screenshots/discord-demo.png)  — shows the notification card as it appears in a Discord channel._
+> ![Discord Notification](screenshots/discord-demo.png)
 
 ### Telegram Notification
 <!-- Add screenshot here -->
-> _Screenshot coming soon — shows the Telegram message format._
-
+> ![Telegram Notification](screenshots/telegram-demo.png)
 ### GitHub Actions Running
 <!-- Add screenshot here -->
-> _Screenshot coming soon — shows the workflow log with channels being checked._
+> ![GitHub Actions](screenshots/github-actions.png)
 
 ---
 
