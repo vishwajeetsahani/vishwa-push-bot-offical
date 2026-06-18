@@ -197,6 +197,14 @@ Telegram notifications use the same format with Markdown formatting.
 
 ---
 
+## ⚠️ Important Note
+
+GitHub Actions scheduled workflows are not guaranteed to run exactly every 15 minutes.
+
+GitHub may delay scheduled jobs during platform load.
+
+For mission-critical notifications, cron-job.org can be used as an external trigger.
+
 ## 🛠️ Troubleshooting
 
 **Bot is not sending notifications**
