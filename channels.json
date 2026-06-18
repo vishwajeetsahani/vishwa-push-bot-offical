@@ -1,8 +1,12 @@
 {
   "channels": [
     {
-      "id": "YOUR_CHANNEL_ID_HERE",
-      "group": "group"
+      "id": "channel-id",
+      "group": "group-1"
+    },
+    {
+      "id": "2nd-channel-id",
+      "group": "group-2"
     }
   ]
 }
