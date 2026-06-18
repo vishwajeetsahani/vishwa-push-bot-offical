@@ -1,16 +1,8 @@
 {
   "channels": [
     {
-      "id": "UCQj_VffUhd_d51ZtaVzl71g",
-      "group": "hindi"
-    },
-    {
-      "id": "UCQmvoJsVP2-fHMWpvplCqBw",
-      "group": "hindi"
-    },
-    {
-      "id": "UCnUAviTcu5pH2-YskdUSOXg",
-      "group": "english"
+      "id": "YOUR_CHANNEL_ID_HERE",
+      "group": "group"
     }
   ]
 }
