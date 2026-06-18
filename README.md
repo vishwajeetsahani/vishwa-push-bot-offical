@@ -2,11 +2,11 @@
 
 > Free, serverless YouTube notification bot — powered by GitHub Actions. No VPS. No server. No monthly cost. Just fork and go.
 
-![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/vishwa-push-bot?style=flat-square&logo=github)
-![GitHub forks](https://img.shields.io/github/forks/YOUR_USERNAME/vishwa-push-bot?style=flat-square&logo=github)
-![GitHub issues](https://img.shields.io/github/issues/YOUR_USERNAME/vishwa-push-bot?style=flat-square)
-![GitHub Actions](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/vishwa-push-bot/notify.yml?style=flat-square&label=bot%20status)
-![License](https://img.shields.io/github/license/YOUR_USERNAME/vishwa-push-bot?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/vishwajeetsahani/vishwa-push-bot-offical?style=flat-square&logo=github)
+![GitHub forks](https://img.shields.io/github/forks/vishwajeetsahani/vishwa-push-bot-offical?style=flat-square&logo=github)
+![GitHub issues](https://img.shields.io/github/issues/vishwajeetsahani/vishwa-push-bot-offical?style=flat-square)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/vishwajeetsahani/vishwa-push-bot-offical/notify.yml?style=flat-square&label=bot%20status)
+![License](https://img.shields.io/github/license/vishwajeetsahani/vishwa-push-bot-offical?style=flat-square)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
 
 ---
