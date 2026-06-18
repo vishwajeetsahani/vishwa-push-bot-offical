@@ -11,21 +11,57 @@
 
 ---
 
+## 🎬 Demo
+
+### Discord Notification
+<!-- Add screenshot here -->
+> _Screenshot coming soon — shows the notification card as it appears in a Discord channel._
+
+### Telegram Notification
+<!-- Add screenshot here -->
+> _Screenshot coming soon — shows the Telegram message format._
+
+### GitHub Actions Running
+<!-- Add screenshot here -->
+> _Screenshot coming soon — shows the workflow log with channels being checked._
+
+---
+
 ## ✨ What is this?
 
 **Vishwa Push Bot** monitors your favorite YouTube channels and instantly sends notifications to Discord and Telegram whenever a new video is uploaded — completely free, with zero server setup.
 
 It runs automatically every 15 minutes using GitHub Actions, which gives you 2,000 free minutes per month (more than enough).
 
+---
+
+## ⚙️ How It Works
+
 ```
 YouTube Channel uploads a video
          ↓
-GitHub Actions detects it (every 15 min)
+YouTube RSS Feed (public, no API key needed)
+         ↓
+GitHub Actions checks feed every 15 minutes
+         ↓
+Vishwa Push Bot compares against last seen video
          ↓
 Sends notification to Discord + Telegram
          ↓
          ✅ Done
 ```
+
+---
+
+## 🎯 Who Is This For?
+
+- ✅ YouTube Creators who want to alert their own community
+- ✅ Discord Communities tracking their favorite channels
+- ✅ Telegram Channels running automated update feeds
+- ✅ Anime / Manhwa Communities following upload schedules
+- ✅ Gaming Communities monitoring gaming YouTubers
+- ✅ News & Update Channels that need fast turnaround
+- ✅ Educational Channels keeping students notified
 
 ---
 
@@ -129,24 +165,10 @@ vishwa-push-bot/
 ├── .github/
 │   └── workflows/
 │       └── notify.yml          # GitHub Actions schedule config
-│
-├── config/
-│   ├── channels.json           # ✏️  Edit this — your channels list
-│   └── channels.example.json   # Reference example
-│
-├── src/
-│   ├── main.py                 # Main bot logic
-│   ├── youtube.py              # YouTube feed fetcher
-│   ├── discord_notify.py       # Discord notification sender
-│   ├── telegram_notify.py      # Telegram notification sender
-│   └── utils.py                # Helpers and logging
-│
-├── data/
-│   └── last_videos.json        # Auto-managed — don't edit this
-│
-├── channels.json               # ✏️  Quick-access copy (root level)
-├── requirements.txt
-└── README.md
+├── main.py                     # Main bot logic
+├── channels.json               # ✏️  Edit this — your channels list
+├── last_videos.json            # Auto-managed — don't edit this
+└── requirements.txt
 ```
 
 ---
@@ -159,10 +181,10 @@ vishwa-push-bot/
 {
   "channels": [
     {
-      "id": "UCxxxxxxxxxxxxxxxxxxxxxx",   // YouTube Channel ID (required)
-      "name": "Channel Display Name",     // For your reference in logs
-      "group": "hindi",                   // Group name for routing (required)
-      "enabled": true                     // Set false to pause this channel
+      "id": "UCxxxxxxxxxxxxxxxxxxxxxx",
+      "name": "Channel Display Name",
+      "group": "hindi",
+      "enabled": true
     }
   ]
 }
@@ -170,7 +192,7 @@ vishwa-push-bot/
 
 ### Group routing
 
-Groups let you send notifications from different channels to different Discord servers. Map each group to a secret name in your workflow:
+Groups let you send notifications from different channels to different Discord servers:
 
 | Group Name | Secret Used |
 |---|---|
@@ -197,13 +219,26 @@ Telegram notifications use the same format with Markdown formatting.
 
 ---
 
-## ⚠️ Important Note
+## 📊 Resource Usage
 
-GitHub Actions scheduled workflows are not guaranteed to run exactly every 15 minutes.
+| Channels Monitored | Estimated Monthly Usage |
+|---|---|
+| 5 channels | ~50 min |
+| 20 channels | ~200 min |
+| 50 channels | ~400 min |
 
-GitHub may delay scheduled jobs during platform load.
+GitHub public repositories provide enough free execution time for most creator setups. The free tier limit is 2,000 min/month.
 
-For mission-critical notifications, cron-job.org can be used as an external trigger.
+---
+
+## ⚠️ Known Limitations
+
+- GitHub Actions scheduled workflows are **not guaranteed** to run exactly every 15 minutes
+- During high GitHub platform load, workflows may be delayed by several minutes
+- For mission-critical notifications, [cron-job.org](https://cron-job.org) can be used as an external trigger to keep runs on time
+- Only **public** YouTube videos are detectable — private and unlisted videos will not trigger notifications
+
+---
 
 ## 🛠️ Troubleshooting
 
@@ -214,7 +249,7 @@ For mission-critical notifications, cron-job.org can be used as an external trig
 - Make sure the Channel ID is correct, not the channel handle (`@name`)
 
 **Getting duplicate notifications**
-- Check that `data/last_videos.json` is being committed back to the repo after each run
+- Check that `last_videos.json` is being committed back to the repo after each run
 - Look at the Action logs for any commit errors
 
 **Discord notifications not arriving**
@@ -228,7 +263,7 @@ For mission-critical notifications, cron-job.org can be used as an external trig
 - The `TELEGRAM_CHAT_ID` for channels starts with `-100`
 
 **GitHub Actions ran but nothing happened**
-- This is normal if no new videos were uploaded since the last check. Check the logs — it should say "No new videos found."
+- This is normal if no new videos were uploaded since the last check. The logs will say "No new videos found."
 
 ---
 
@@ -247,7 +282,7 @@ Every 15 minutes. This is the minimum interval GitHub Actions allows for schedul
 Yes, by default. Shorts filtering is on the roadmap for a future release.
 
 **What happens if GitHub Actions goes down?**
-You might miss a notification window. The bot will resume normally on the next run and won't send duplicates for already-seen videos.
+You might miss a notification window. The bot resumes normally on the next run and won't send duplicates for already-seen videos.
 
 **Can I add more than 2 Discord servers?**
 Yes — add more secrets and update `notify.yml` to route additional groups.
@@ -259,12 +294,14 @@ No. Only public videos are detectable via the YouTube RSS feed.
 
 ## 🔓 Why Open Source?
 
-Unlike paid notification services, Vishwa Push Bot puts you in full control.
+No subscriptions. No vendor lock-in. No third-party server storing your tokens. You own everything.
 
 - **You own your data** — no third party stores your tokens or channel list
 - **Modify anything** — add features, change formats, route to more services
 - **No lock-in** — no subscription, no account, no vendor that can shut down
 - **Community driven** — bug fixes and features come from real users like you
+
+Fork it, modify it, distribute it, or build your own version on top of it.
 
 ---
 
@@ -289,6 +326,14 @@ Unlike paid notification services, Vishwa Push Bot puts you in full control.
 | Analytics dashboard | 💭 Idea |
 
 Have a feature idea? [Open an issue](../../issues/new) — we read everything.
+
+---
+
+## 🚀 Latest Release
+
+**Current Version: v1.0.0**
+
+See [Releases](../../releases) for the full changelog and version history.
 
 ---
 
@@ -324,13 +369,11 @@ Found a security issue? Please report it privately rather than opening a public 
 | 💡 Have an idea? | [Create a Feature Request](../../issues/new?template=feature_request.md) |
 | 🙋 Have a question? | [Start a Discussion](../../discussions) |
 
-Community contributions are always welcome.
-
 ---
 
-## ❤️ Support The Project
+## ⭐ Support The Project
 
-If this bot saves you time, consider:
+If this bot saves you time:
 
 - ⭐ **Star the repository** — helps others discover it
 - 🍴 **Fork and build** — extend it for your own needs
